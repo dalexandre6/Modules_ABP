@@ -1,0 +1,18 @@
+﻿@page
+@using Microsoft.Extensions.Localization
+@using ModuleA.Localization
+@using ModuleA.Web.Pages.ModuleA
+@model ModuleA.Web.Pages.ModuleA.IndexModel
+@inject IStringLocalizer<ModuleAResource> L
+
+@{
+}
+<h1>ModuleA</h1>
+<p>@L["SamplePageMessage"]</p>
+
+<h1>This is a Module ---->  ModuleA</h1>
+<h1 style="color:blue">It's working with MONGO DB. Run the app and go to Swagger ..: </h1>
+
+<h2>Then, you should go to /Get/api/app/todo-one to See all the results from the DB.</h2>
+
+<h2>If you want to add a new Record in Mongo, the go to: /Post/api/app/todo-one and add a content and isDone item.</h2>
