@@ -15,6 +15,7 @@ using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using ModuleA.EntityFrameworkCore;
 using ModuleA;
 using Volo.Abp.EntityFrameworkCore.Modeling;
+using ModuleB.EntityFrameworkCore;
 
 namespace MainAppn.EntityFrameworkCore;
 
@@ -89,5 +90,6 @@ public class MainAppnDbContext :
 
 
         builder.ConfigureModuleA();
+            builder.ConfigureModuleB();
         }
 }

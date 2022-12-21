@@ -13,6 +13,7 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using ModuleA.EntityFrameworkCore;
+using ModuleB.EntityFrameworkCore;
 
 namespace MainAppn.EntityFrameworkCore;
 
@@ -29,6 +30,7 @@ namespace MainAppn.EntityFrameworkCore;
     typeof(AbpFeatureManagementEntityFrameworkCoreModule)
     )]
 [DependsOn(typeof(ModuleAEntityFrameworkCoreModule))]
+    [DependsOn(typeof(ModuleBEntityFrameworkCoreModule))]
     public class MainAppnEntityFrameworkCoreModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)

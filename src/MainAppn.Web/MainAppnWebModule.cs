@@ -38,6 +38,7 @@ using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 using ModuleA.Web;
+using ModuleB.Web;
 
 namespace MainAppn.Web;
 
@@ -55,6 +56,7 @@ namespace MainAppn.Web;
     typeof(AbpSwashbuckleModule)
     )]
 [DependsOn(typeof(ModuleAWebModule))]
+    [DependsOn(typeof(ModuleBWebModule))]
     public class MainAppnWebModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
